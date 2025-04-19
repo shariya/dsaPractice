@@ -28,6 +28,7 @@ public class Main {
     private static int[] invokeSortedSquareArray(){
         int[] inputArray = {-7,-5,-4,3,6,8,9};
         SortedSquareArray sortedSquareArray = new SortedSquareArray(inputArray);
-        return sortedSquareArray.sortedSquares();
+        //return sortedSquareArray.sortedSquares();
+        return sortedSquareArray.sortedSquareOptimal();
     }
 }

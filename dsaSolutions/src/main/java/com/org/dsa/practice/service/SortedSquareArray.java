@@ -14,7 +14,25 @@ public class SortedSquareArray {
         for(int i=0; i< inputArray.length; i++){
             resultArray[i] = Math.abs(inputArray[i] * inputArray[i]);
         }
-        Arrays.sort(resultArray);//n log n times default Timsort algorithm
+        Arrays.sort(resultArray);//n log n times default Quicksort algorithm
        return resultArray;
+    }
+
+    public int[] sortedSquareOptimal(){
+        int[] resultArray = new int[inputArray.length];
+        int startIndex =0;
+        int endIndex = inputArray.length-1;
+        for(int index = inputArray.length-1; index >= 0; index--){
+            int startIndexValue = inputArray[startIndex];
+            int endIndexValue = inputArray[endIndex];
+            if(Math.abs(startIndexValue) > Math.abs(endIndexValue)){
+                resultArray[index] = startIndexValue * startIndexValue;
+                startIndex++;
+            }else{
+                resultArray[index] = endIndexValue * endIndexValue;
+                endIndex--;
+            }
+        }
+        return resultArray;
     }
 }
