@@ -10,6 +10,7 @@ public class FourNumberSum {
     }
     public int[] findFourNumberSum() {
         int[] result = new int[4];
+
         return result;
     }
 }
