@@ -3,6 +3,7 @@ package com.org.dsa.practice;
 import com.org.dsa.practice.service.MoveElementToEnd;
 import com.org.dsa.practice.service.SmallestDifference;
 import com.org.dsa.practice.service.SortedSquareArray;
+import com.org.dsa.practice.service.SubArraySort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +19,9 @@ public class Main {
         //sorted square array invocation
         //System.out.printf("Sorted Square Array: " + Arrays.toString(invokeSortedSquareArray()));
         //sorted move element to end
-        System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+        //System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+        //sub array sort
+        System.out.printf("Sub Array Sort: " + Arrays.toString(invokeSubArraySort()));
     }
 
     private static Map<Integer,Integer> invokeSmallestDifference(){
@@ -40,5 +43,17 @@ public class Main {
         int elementToMove = 2;
         MoveElementToEnd moveElementToEnd = new MoveElementToEnd(inputArray,elementToMove);
         return moveElementToEnd.moveElementToEnd();
+    }
+    private static int[] invokeSubArraySort(){
+       // int[] inputArray = {1,2,3,4,5,6,7,8,9,10};[-1,1]
+        //int[] inputArray = {1,2,3,4,5,6,7,8,9,-1};[0,9]
+        //int[] inputArray = {1,2,3,-1,-2,-3,-4,-5,-6,-7};[0,9]
+        //int[] inputArray = {1,2,3,-1,-2,-3,-4,-5,-6};[0,8
+        //int[] inputArray = {1,2,3,-1,-2,-3};[0,5]
+        int[] inputArray = {1};//[0,0]
+        //int[] inputArray = {-1};[0,0]
+        //int[] inputArray = {};[-1,1]
+        SubArraySort subArraySort = new SubArraySort(inputArray);
+        return subArraySort.findSubArrayToBeSorted();
     }
 }
