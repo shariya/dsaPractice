@@ -45,14 +45,10 @@ public class Main {
         return moveElementToEnd.moveElementToEnd();
     }
     private static int[] invokeSubArraySort(){
-       // int[] inputArray = {1,2,3,4,5,6,7,8,9,10};[-1,1]
-        //int[] inputArray = {1,2,3,4,5,6,7,8,9,-1};[0,9]
-        //int[] inputArray = {1,2,3,-1,-2,-3,-4,-5,-6,-7};[0,9]
-        //int[] inputArray = {1,2,3,-1,-2,-3,-4,-5,-6};[0,8
-        //int[] inputArray = {1,2,3,-1,-2,-3};[0,5]
-        int[] inputArray = {1};//[0,0]
-        //int[] inputArray = {-1};[0,0]
-        //int[] inputArray = {};[-1,1]
+        //int[] inputArray = {1,2,3,4,5,6,7,8,9,10};//[-1,1]
+        int[] inputArray = {1, 2, 4, 7, 10, 11, 7, 12, 6, 7, 16, 18, 19};//[3,12]
+       // int[] inputArray = {1};//[-1,1]
+        //int[] inputArray = {};//[-1,1]
         SubArraySort subArraySort = new SubArraySort(inputArray);
         return subArraySort.findSubArrayToBeSorted();
     }
