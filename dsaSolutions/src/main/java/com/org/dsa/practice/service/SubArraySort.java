@@ -2,11 +2,9 @@ package com.org.dsa.practice.service;
 
 public class SubArraySort {
     private int[] inputArray;
-    private int[] toBeSortedArrayIndexes;
 
     public SubArraySort(int[] inputArray) {
         this.inputArray = inputArray;
-        this.toBeSortedArrayIndexes = new int[2];
     }
 
     public int[] findSubArrayToBeSorted(){
