@@ -3,6 +3,7 @@ package com.org.dsa.practice;
 import com.org.dsa.practice.service.MoveElementToEnd;
 import com.org.dsa.practice.service.SmallestDifference;
 import com.org.dsa.practice.service.SortedSquareArray;
+import com.org.dsa.practice.service.TournamentWinner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +19,9 @@ public class Main {
         //sorted square array invocation
         //System.out.printf("Sorted Square Array: " + Arrays.toString(invokeSortedSquareArray()));
         //sorted move element to end
-        System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+        //System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+        //tournament winner
+        System.out.println("Tournament Winner: " + invokeTournamentWinner());
     }
 
     private static Map<Integer,Integer> invokeSmallestDifference(){
@@ -40,5 +43,12 @@ public class Main {
         int elementToMove = 2;
         MoveElementToEnd moveElementToEnd = new MoveElementToEnd(inputArray,elementToMove);
         return moveElementToEnd.moveElementToEnd();
+    }
+
+    private static String invokeTournamentWinner(){
+        Map<String,String> competitions = Map.of("HTML","C#","C#","Python","Python","HTML");
+        int[] results = {0,0,1};
+        TournamentWinner tournamentWinner = new TournamentWinner(competitions,results);
+        return tournamentWinner.tournamentWinner();
     }
 }
