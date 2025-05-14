@@ -1,5 +1,6 @@
 package com.org.dsa.practice;
 
+import com.org.dsa.practice.service.MonotonicArray;
 import com.org.dsa.practice.service.MoveElementToEnd;
 import com.org.dsa.practice.service.SmallestDifference;
 import com.org.dsa.practice.service.SortedSquareArray;
@@ -18,7 +19,8 @@ public class Main {
         //sorted square array invocation
         //System.out.printf("Sorted Square Array: " + Arrays.toString(invokeSortedSquareArray()));
         //sorted move element to end
-        System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+        //System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+        System.out.printf("Is Monotonic Array: " + invokeIsMonotonicArray());
     }
 
     private static Map<Integer,Integer> invokeSmallestDifference(){
@@ -40,5 +42,15 @@ public class Main {
         int elementToMove = 2;
         MoveElementToEnd moveElementToEnd = new MoveElementToEnd(inputArray,elementToMove);
         return moveElementToEnd.moveElementToEnd();
+    }
+    private static boolean invokeIsMonotonicArray(){
+        int[] inputArray = {1,2,2,3,4,5};//T
+        //int[] inputArray = {5,4,3,2,1};//T
+        //int[] inputArray = {1,2,3,4,5};//T
+        //int[] inputArray = {1,2,3,4,5,4};//F
+       // int[] inputArray = {1,1,2,3,3,4,5};//T
+        //int[] inputArray = {1,1,1,1,1};//T
+        MonotonicArray monotonicArray = new MonotonicArray(inputArray);
+        return monotonicArray.isMonotonicArray();
     }
 }
