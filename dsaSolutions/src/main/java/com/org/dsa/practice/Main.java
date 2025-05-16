@@ -3,13 +3,11 @@ package com.org.dsa.practice;
 import com.org.dsa.practice.service.MoveElementToEnd;
 import com.org.dsa.practice.service.SmallestDifference;
 import com.org.dsa.practice.service.SortedSquareArray;
+import com.org.dsa.practice.service.SpiralMatrix;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +16,8 @@ public class Main {
         //sorted square array invocation
         //System.out.printf("Sorted Square Array: " + Arrays.toString(invokeSortedSquareArray()));
         //sorted move element to end
-        System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+//        System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+        System.out.printf("Spiral Matrix: " + invokeSpiralMatrix());
     }
 
     private static Map<Integer,Integer> invokeSmallestDifference(){
@@ -40,5 +39,11 @@ public class Main {
         int elementToMove = 2;
         MoveElementToEnd moveElementToEnd = new MoveElementToEnd(inputArray,elementToMove);
         return moveElementToEnd.moveElementToEnd();
+    }
+
+    private static List<Integer> invokeSpiralMatrix(){
+        int[][] inputArray =  {{1,2,3,4,5},{16,17,18,19,6},{15,24,25,20,7},{14,23,22,21,8},{13,12,11,10,9}};
+        SpiralMatrix spiralMatrix = new SpiralMatrix(inputArray);
+        return spiralMatrix.spiralMatrix();
     }
 }
