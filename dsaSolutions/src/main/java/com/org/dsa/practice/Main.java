@@ -1,6 +1,7 @@
 package com.org.dsa.practice;
 
 import com.org.dsa.practice.service.MoveElementToEnd;
+import com.org.dsa.practice.service.NonConstructiveChange;
 import com.org.dsa.practice.service.SmallestDifference;
 import com.org.dsa.practice.service.SortedSquareArray;
 
@@ -18,7 +19,8 @@ public class Main {
         //sorted square array invocation
         //System.out.printf("Sorted Square Array: " + Arrays.toString(invokeSortedSquareArray()));
         //sorted move element to end
-        System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+//        System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
+        System.out.printf("Non Constructive change: " + invokeNonConstructiveChange());
     }
 
     private static Map<Integer,Integer> invokeSmallestDifference(){
@@ -40,5 +42,15 @@ public class Main {
         int elementToMove = 2;
         MoveElementToEnd moveElementToEnd = new MoveElementToEnd(inputArray,elementToMove);
         return moveElementToEnd.moveElementToEnd();
+    }
+
+    private static int invokeNonConstructiveChange(){
+        //int[] inputArray = {5,7,1,1,2,3,22};//20
+        //int[] inputArray = {1,2,5};//4
+       // int[] inputArray = {1,1,4};//3
+        //int[] inputArray = {1,4,2};//8
+        int[] inputArray = {2,3,4,5};//9
+        NonConstructiveChange nonConstructiveChange = new NonConstructiveChange(inputArray);
+        return nonConstructiveChange.findNonConstructiveChange();
     }
 }
