@@ -12,12 +12,14 @@ public class SpiralMatrix {
 
     public List<Integer> spiralMatrix(){
         List<Integer> resultList = new ArrayList<>();
-        for (int[] ints : inputArray) {
-            for (int j = 0; j < inputArray.length; j++) {
-                resultList.add(ints[j]);
+        System.out.println("row " + inputArray.length);
+        for (int i=0; i < inputArray.length ; i ++) {
+            System.out.println("column " + inputArray[i].length);
+            for (int j = 0; j < inputArray[i].length; j++) {
+                resultList.add(inputArray[i][j]);
             }
         }
-        resultList.sort(Integer::compareTo);
+        //resultList.sort(Integer::compareTo);
         return resultList;
     }
 }
