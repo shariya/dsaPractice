@@ -25,11 +25,12 @@ public class Main {
         //System.out.printf("Sorted Square Array: " + Arrays.toString(invokeSortedSquareArray()));
         //sorted move element to end
         //System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
-        System.out.printf("Is Monotonic Array: " + invokeIsMonotonicArray());
+        //System.out.printf("Is Monotonic Array: " + invokeIsMonotonicArray());
         //tournament winner
         //System.out.println("Tournament Winner: " + invokeTournamentWinner());
 
 //        System.out.printf("Sub Array Sort: " + Arrays.toString(invokeSubArraySort()));
+        System.out.printf("Result" + invokeSmallestDifference());
     }
 
     private static Map<Integer,Integer> invokeSmallestDifference(){
@@ -37,6 +38,7 @@ public class Main {
         int[] arrayList1 = {26,134,135,15,17};
         SmallestDifference smallestDifference = new SmallestDifference(arrayList,arrayList1);
         return smallestDifference.findSmallestDifference();
+
     }
 
     private static int[] invokeSortedSquareArray(){
@@ -79,4 +81,6 @@ public class Main {
         SubArraySort subArraySort = new SubArraySort(inputArray);
         return subArraySort.findSubArrayToBeSorted();
     }
+
+
 }
