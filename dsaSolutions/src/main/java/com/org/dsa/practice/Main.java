@@ -1,5 +1,6 @@
 package com.org.dsa.practice;
 
+import com.org.dsa.practice.service.MonotonicArray;
 import com.org.dsa.practice.service.MoveElementToEnd;
 import com.org.dsa.practice.service.SmallestDifference;
 import com.org.dsa.practice.service.SortedSquareArray;
@@ -24,12 +25,11 @@ public class Main {
         //System.out.printf("Sorted Square Array: " + Arrays.toString(invokeSortedSquareArray()));
         //sorted move element to end
         //System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
-
+        System.out.printf("Is Monotonic Array: " + invokeIsMonotonicArray());
         //tournament winner
-        System.out.println("Tournament Winner: " + invokeTournamentWinner());
+        //System.out.println("Tournament Winner: " + invokeTournamentWinner());
 
 //        System.out.printf("Sub Array Sort: " + Arrays.toString(invokeSubArraySort()));
-
     }
 
     private static Map<Integer,Integer> invokeSmallestDifference(){
@@ -53,11 +53,23 @@ public class Main {
         return moveElementToEnd.moveElementToEnd();
     }
 
+    private static boolean invokeIsMonotonicArray(){
+        int[] inputArray = {1,2,2,3,4,5};//T
+        //int[] inputArray = {5,4,3,2,1};//T
+        //int[] inputArray = {1,2,3,4,5};//T
+        //int[] inputArray = {1,2,3,4,5,4};//F
+       // int[] inputArray = {1,1,2,3,3,4,5};//T
+        //int[] inputArray = {1,1,1,1,1};//T
+        MonotonicArray monotonicArray = new MonotonicArray(inputArray);
+        return monotonicArray.isMonotonicArray();
+}
+
     private static String invokeTournamentWinner(){
         Map<String,String> competitions = Map.of("HTML","C#","C#","Python","Python","HTML");
         int[] results = {0,0,1};
         TournamentWinner tournamentWinner = new TournamentWinner(competitions,results);
         return tournamentWinner.tournamentWinner();
+    }
 
     private static int[] invokeSubArraySort(){
         //int[] inputArray = {1,2,3,4,5,6,7,8,9,10};//[-1,1]
