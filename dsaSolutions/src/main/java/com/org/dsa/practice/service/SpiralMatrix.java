@@ -12,9 +12,7 @@ public class SpiralMatrix {
 
     public List<Integer> spiralMatrix(){
         List<Integer> resultList = new ArrayList<>();
-        System.out.println("row " + inputArray.length);
         for (int i=0; i < inputArray.length ; i ++) {
-            System.out.println("column " + inputArray[i].length);
             for (int j = 0; j < inputArray[i].length; j++) {
                 resultList.add(inputArray[i][j]);
             }
