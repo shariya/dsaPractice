@@ -31,7 +31,7 @@ public class Main {
         //System.out.println("Tournament Winner: " + invokeTournamentWinner());
 
 //        System.out.printf("Sub Array Sort: " + Arrays.toString(invokeSubArraySort()));
-        System.out.printf("Result" + invokeSmallestDifference());
+  //      System.out.printf("Result" + invokeSmallestDifference());
     }
 
     private static Map<Integer,Integer> invokeSmallestDifference(){
