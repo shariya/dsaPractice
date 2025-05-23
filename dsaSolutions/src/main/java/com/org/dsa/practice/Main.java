@@ -27,7 +27,7 @@ public class Main {
 //        System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
         System.out.printf("Non Constructive change: " + invokeNonConstructiveChange());
 //        System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
-        System.out.printf("Spiral Matrix: " + invokeSpiralMatrix());
+      //  System.out.printf("Spiral Matrix: " + invokeSpiralMatrix());
         //System.out.printf("Move Element to end: " + Arrays.toString(invokeMoveElementToEnd()));
         //System.out.printf("Is Monotonic Array: " + invokeIsMonotonicArray());
         //tournament winner
